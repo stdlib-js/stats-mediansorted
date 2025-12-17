@@ -73,10 +73,7 @@ var array = require( '@stdlib/ndarray-array' );
 var x = array( [ 1.0, 2.0, 3.0 ] );
 
 var y = mediansorted( x );
-// returns <ndarray>
-
-var v = y.get();
-// returns 2.0
+// returns <ndarray>[ 2.0 ]
 ```
 
 The function has the following parameters:
@@ -93,81 +90,58 @@ The function accepts the following options:
 By default, the function performs a reduction over all elements in a provided input [ndarray][@stdlib/ndarray/ctor]. To perform a reduction over specific dimensions, provide a `dims` option.
 
 ```javascript
-var ndarray2array = require( '@stdlib/ndarray-to-array' );
 var array = require( '@stdlib/ndarray-array' );
 
 var x = array( [ 1.0, 2.0, 3.0, 4.0 ], {
     'shape': [ 2, 2 ],
     'order': 'row-major'
 });
-var v = ndarray2array( x );
-// returns [ [ 1.0, 2.0 ], [ 3.0, 4.0 ] ]
+// returns <ndarray>[ [ 1.0, 2.0 ], [ 3.0, 4.0 ] ]
 
 var y = mediansorted( x, {
     'dims': [ 0 ]
 });
-// returns <ndarray>
-
-v = ndarray2array( y );
-// returns [ 2.0, 3.0 ]
+// returns <ndarray>[ 2.0, 3.0 ]
 
 y = mediansorted( x, {
     'dims': [ 1 ]
 });
-// returns <ndarray>
-
-v = ndarray2array( y );
-// returns [ 1.5, 3.5 ]
+// returns <ndarray>[ 1.5, 3.5 ]
 
 y = mediansorted( x, {
     'dims': [ 0, 1 ]
 });
-// returns <ndarray>
-
-v = y.get();
-// returns 2.5
+// returns <ndarray>[ 2.5 ]
 ```
 
 By default, the function excludes reduced dimensions from the output [ndarray][@stdlib/ndarray/ctor]. To include the reduced dimensions as singleton dimensions, set the `keepdims` option to `true`.
 
 ```javascript
-var ndarray2array = require( '@stdlib/ndarray-to-array' );
 var array = require( '@stdlib/ndarray-array' );
 
 var x = array( [ 1.0, 2.0, 3.0, 4.0 ], {
     'shape': [ 2, 2 ],
     'order': 'row-major'
 });
-
-var v = ndarray2array( x );
-// returns [ [ 1.0, 2.0 ], [ 3.0, 4.0 ] ]
+// returns <ndarray>[ [ 1.0, 2.0 ], [ 3.0, 4.0 ] ]
 
 var y = mediansorted( x, {
     'dims': [ 0 ],
     'keepdims': true
 });
-// returns <ndarray>
-
-v = ndarray2array( y );
-// returns [ [ 2.0, 3.0 ] ]
+// returns <ndarray>[ [ 2.0, 3.0 ] ]
 
 y = mediansorted( x, {
     'dims': [ 1 ],
     'keepdims': true
 });
-// returns <ndarray>
-
-v = ndarray2array( y );
-// returns [ [ 1.5 ], [ 3.5 ] ]
+// returns <ndarray>[ [ 1.5 ], [ 3.5 ] ]
 
 y = mediansorted( x, {
     'dims': [ 0, 1 ],
     'keepdims': true
 });
-// returns <ndarray>
-
-v = ndarray2array( y );
-// returns [ [ 2.5 ] ]
+// returns <ndarray>[ [ 2.5 ] ]
 ```
 
 By default, the function returns an [ndarray][@stdlib/ndarray/ctor] having a [data type][@stdlib/ndarray/dtypes] determined by the function's output data type [policy][@stdlib/ndarray/output-dtype-policies]. To override the default behavior, set the `dtype` option.
@@ -201,10 +175,7 @@ var x = array( [ 1.0, 2.0, 3.0, 4.0 ] );
 var y = zeros( [] );
 
 var out = mediansorted.assign( x, y );
-// returns <ndarray>
-
-var v = out.get();
-// returns 2.5
+// returns <ndarray>[ 2.5 ]
 
 var bool = ( out === y );
 // returns true
@@ -229,7 +200,7 @@ The method accepts the following options:
 ## Notes
 
 -   Setting the `keepdims` option to `true` can be useful when wanting to ensure that the output [ndarray][@stdlib/ndarray/ctor] is [broadcast-compatible][@stdlib/ndarray/base/broadcast-shapes] with ndarrays having the same shape as the input [ndarray][@stdlib/ndarray/ctor].
--   The output data type [policy][@stdlib/ndarray/output-dtype-policies] only applies to the main function and specifies that, by default, the function must return an [ndarray][@stdlib/ndarray/ctor] having a real-valued or "generic" [data type][@stdlib/ndarray/dtypes]. For the `assign` method, the output [ndarray][@stdlib/ndarray/ctor] is allowed to have any supported output [data type][@stdlib/ndarray/dtypes].
+-   The output data type [policy][@stdlib/ndarray/output-dtype-policies] only applies to the main function and specifies that, by default, the function must return an [ndarray][@stdlib/ndarray/ctor] having the same [data type][@stdlib/ndarray/dtypes] as the input [ndarray][@stdlib/ndarray/ctor]. For the `assign` method, the output [ndarray][@stdlib/ndarray/ctor] is allowed to have any supported output [data type][@stdlib/ndarray/dtypes].
 
 </section>
 
