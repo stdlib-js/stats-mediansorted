@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-01-12)
+## Unreleased (2026-01-30)
 
 <section class="features">
 
@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`50af83b`](https://github.com/stdlib-js/stdlib/commit/50af83bcaa184b672be143271ee32f0b9fba06e1) - **docs:** update copy _(by Athan Reines)_
 -   [`4b1efc6`](https://github.com/stdlib-js/stdlib/commit/4b1efc6552af03e1b7d260f6f10e7e042e7d68f6) - **docs:** update dtype type _(by Athan Reines)_
 -   [`ff435c0`](https://github.com/stdlib-js/stdlib/commit/ff435c01d291e9ef75429a026fb221b729aa4a07) - **docs:** update dtype type _(by Athan Reines)_
 -   [`f419d39`](https://github.com/stdlib-js/stdlib/commit/f419d39fe7ec26198d390fa01e85377619c881cd) - **docs:** update return annotations to use ndarray instance notation for `stats/mediansorted` [(#9104)](https://github.com/stdlib-js/stdlib/pull/9104) _(by Pratik)_
