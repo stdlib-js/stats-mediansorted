@@ -42,7 +42,8 @@
     "@stdlib/stats-base-ndarray-dmediansorted": "github:stdlib-js/stats-base-ndarray-dmediansorted#main",
     "@stdlib/stats-base-ndarray-mediansorted": "github:stdlib-js/stats-base-ndarray-mediansorted#main",
     "@stdlib/stats-base-ndarray-smediansorted": "github:stdlib-js/stats-base-ndarray-smediansorted#main",
-    "@stdlib/types": "^0.4.3"
+    "@stdlib/types": "^0.4.3",
+    "@stdlib/error-tools-fmtprodmsg": "^0.2.2"
   },
   "devDependencies": {
     "@stdlib/array-linspace": "^0.2.1",
