@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import mediansorted from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-mediansorted@esm/index.mjs';
+import mediansorted from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-mediansorted@v0.1.0-esm/index.mjs';
 ```
 
 #### mediansorted( x\[, options] )
@@ -203,7 +203,7 @@ The method accepts the following options:
 import linspace from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-linspace@esm/index.mjs';
 import getDType from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtype@esm/index.mjs';
 import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@esm/index.mjs';
-import mediansorted from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-mediansorted@esm/index.mjs';
+import mediansorted from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-mediansorted@v0.1.0-esm/index.mjs';
 
 // Generate a sorted ndarray:
 var x = linspace( [ 5, 5 ], 0.0, 20.0 );
