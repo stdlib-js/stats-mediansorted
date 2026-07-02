@@ -1,5 +1,5 @@
-"use strict";var s=function(i,e){return function(){return e||i((e={exports:{}}).exports,e),e.exports}};var t=s(function(y,a){
-var r=require('@stdlib/ndarray-dtypes/dist'),d=require('@stdlib/stats-base-ndarray-mediansorted/dist'),n=require('@stdlib/stats-base-ndarray-dmediansorted/dist'),o=require('@stdlib/stats-base-ndarray-smediansorted/dist'),u=require('@stdlib/ndarray-base-unary-reduce-strided1d-dispatch-factory/dist'),v=r("real_and_generic"),c=r("real_and_generic"),p={output:"same",casting:"none"},l={types:["float64","float32"],fcns:[n,o],default:d},m=u(l,[v],c,p);a.exports=m
-});var q=t();module.exports=q;
+"use strict";var d=function(i,e){return function(){try{return e||i((e={exports:{}}).exports,e),e.exports}catch(s){throw (e=0, s)}};};var t=d(function(g,a){
+var r=require('@stdlib/ndarray-dtypes/dist'),n=require('@stdlib/stats-base-ndarray-mediansorted/dist'),o=require('@stdlib/stats-base-ndarray-dmediansorted/dist'),u=require('@stdlib/stats-base-ndarray-smediansorted/dist'),v=require('@stdlib/ndarray-base-unary-reduce-strided1d-dispatch-factory/dist'),c=r("real_and_generic"),p=r("real_and_generic"),l={output:"same",casting:"none"},m={types:["float64","float32"],fcns:[o,u],default:n},q=v(m,[c],p,l);a.exports=q
+});var f=t();module.exports=f;
 /** @license Apache-2.0 */
 //# sourceMappingURL=index.js.map
